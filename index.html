@@ -11,26 +11,70 @@
             padding: 0;
         }
         body {
-            height: 100vh;
-            width: 100vw;
+            min-height: 100vh;
+            min-width: 100vw;
             background: url('https://upload.wikimedia.org/wikipedia/commons/3/36/Flag_of_Albania.svg') no-repeat center center fixed;
             background-size: cover;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
+            box-sizing: border-box;
+        }
+        .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 700px;
+            padding: 2vw;
+            box-sizing: border-box;
+            background: rgba(0,0,0,0.35);
+            border-radius: 24px;
+            margin: 2vw;
+        }
+        pre {
+            text-align: center;
+            color: #fff;
+            font-weight: bold;
+            font-size: clamp(1rem, 2.5vw, 1.5rem);
+            font-family: 'Segoe UI', 'Arial', sans-serif;
+            margin: 0 0 1.5em 0;
+            white-space: pre-wrap;
+            word-break: break-word;
+            background: none;
+            padding: 0;
         }
         h1 {
             color: white;
             text-shadow: 2px 2px 8px #000;
-            font-size: 4vw;
+            font-size: clamp(2rem, 6vw, 3.5rem);
             background: rgba(0,0,0,0.3);
-            padding: 1em 2em;
+            padding: 0.7em 1.5em;
             border-radius: 20px;
+            margin: 0;
+            font-family: "Comic Sans MS", "Comic Sans", cursive;
+        }
+        @media (max-width: 600px) {
+            .content-wrapper {
+                max-width: 98vw;
+                padding: 4vw 2vw;
+                margin: 2vw 0;
+            }
+            h1 {
+                font-size: clamp(1.5rem, 8vw, 2.5rem);
+                padding: 0.5em 1em;
+            }
+            pre {
+                font-size: clamp(0.95rem, 4vw, 1.1rem);
+            }
         }
     </style>
 </head>
 <body>
-    <pre style="text-align: center; color: #fff; font-weight: bold; font-size: 20px;">
+    <div class="content-wrapper">
+        <pre>
 Tra i tramonti dell’Albania ti penso,
 bionda luce che illumina ogni senso.
 Occhi azzurri come il mare di Durazzo,
@@ -45,8 +89,8 @@ Quando ridi, il mondo si dimentica del tempo,
 e io resto qui, perso nel tuo abbraccio lento.
 Albanese mia, splendida e vera,
 sei il mio sole, la mia primavera.
-    </pre>
-    <h1 style='font-family: "Comic Sans MS", "Comic Sans", cursive;
-'>Forza Albania</h1>
+        </pre>
+        <h1>Forza Albania</h1>
+    </div>
 </body>
 </html>
